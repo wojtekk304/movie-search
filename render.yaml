@@ -3,7 +3,7 @@ services:
     name: movie-app
     env: java
     plan: free
-    buildCommand: ./mvnw clean package
+    buildCommand: mvn clean package
     startCommand: java -cp target/classes com.movie.App
     envVars:
       - key: JAVA_VERSION
