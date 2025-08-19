@@ -17,7 +17,7 @@ public class App {
         try {
             Connection conn = DriverManager.getConnection("jdbc:h2:mem:movies;DB_CLOSE_DELAY=-1");
             Statement stmt = conn.createStatement();
-            stmt.execute("CREATE TABLE movies (Film VARCHAR, Genre VARCHAR, Lead_Studio VARCHAR, Audience_Score INT, Profitability DOUBLE, Rotten_Tomatoes INT, Worldwide_Gross VARCHAR, Year INT)");
+            stmt.execute("CREATE TABLE movies (Film VARCHAR, Genre VARCHAR, Lead_Studio VARCHAR, Audience_Score INT, Profitability DOUBLE, Rotten_Tomatoes INT, Worldwide_Gross VARCHAR, \"Year\" INT)");
 
             BufferedReader reader = new BufferedReader(new FileReader("films.csv"));
             reader.readLine(); // skip header
