@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: movie-app
+    env: java
+    buildCommand: ./mvnw clean install
+    startCommand: java -cp target/classes com.movie.App
+    plan: free
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
